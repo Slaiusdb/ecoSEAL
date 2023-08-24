@@ -90,7 +90,7 @@
                 <form action="#" method="get" enctype="multipart/form-data">
                     <div class="row">
                         <!-- selecção da imagem -->
-                        <div class="col-md-7 col-xs-12">
+                        <div class="col-md-6 col-xs-12">
                             <div>
                                 <label style="color: #2c3d63;" for="product_image">
                                     <h4>Imagem do Produto:</h4>
@@ -106,30 +106,33 @@
                         </div>
                         <br>
                         <!-- formulário -->
-                        <div class="col-md-5 col-xs-12">
+                        <div class="col-md-6 col-xs-12">
                             <div class="form-box">
                                 <h2>
                                     Editor de Produto
                                 </h2>
                                 <div class="product-form">
-                                    <div>
-                                        <label for="product_name">Nome do Produto:</label><br>
-                                        <input type="text" id="product_name" placeholder=" " />
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1">Nome do Produto</span>
+                                        <input type="text" class="form-control" placeholder="nome do produto"
+                                            aria-label="product_name" aria-describedby="basic-addon1">
                                     </div>
                                     <div class="input_numbers">
-                                        <div>
-                                            <label for="product_price">Preço Unitário:</label><br>
-                                            <input type="number" id="product_price" placeholder="€" />
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">Preço Unitário</span>
+                                            <input type="number" class="form-control" placeholder="€"
+                                                aria-label="product_price" aria-describedby="basic-addon1">
                                         </div>
-                                        <div>
-                                            <label for="product_stock">Quantidade de Stock:</label><br>
-                                            <input type="number" id="product_stock" placeholder="Stock" />
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">Stock</span>
+                                            <input type="number" class="form-control" placeholder="quantidade"
+                                                aria-label="product_stock" aria-describedby="basic-addon1">
                                         </div>
                                     </div>
                                     <div class="text-box">
                                         <label for="product_description">Descrição do Produto:</label><br>
-                                        <textarea class="description_box" placeholder="Descrição" rows="5"
-                                            id="product_description" name="Description"></textarea>
+                                        <textarea class="description_box" placeholder="descrição" rows="5"
+                                            id="product_description"></textarea>
                                     </div>
                                 </div>
                             </div>

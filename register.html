@@ -63,7 +63,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="login.html">Login</a>
-            </li>
+              </li>
             </ul>
           </div>
         </nav>
@@ -93,24 +93,40 @@
                 Registo
               </h1>
               <form action="#" method="get">
-                <div>
-                  <input type="text" placeholder="Nome " />
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Nome</span>
+                  <input type="text" class="form-control" placeholder="seu nome" aria-label="customer_name"
+                    aria-describedby="basic-addon1">
                 </div>
-                <div>
-                  <input type="email" placeholder="Email " />
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Apelido</span>
+                  <input type="text" class="form-control" placeholder="seu apelido" aria-label="customer_surname"
+                    aria-describedby="basic-addon1">
                 </div>
-                <div>
-                  <input type="password" placeholder="Password" />
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Morada</span>
+                  <input type="text" class="form-control" placeholder="sua morada" aria-label="customer_confirm"
+                    aria-describedby="basic-addon1">
                 </div>
-                <div>
-                  <input type="password" placeholder="Repita Password" />
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Email</span>
+                  <input type="email" class="form-control" placeholder="nome.apelido@exemplo.com"
+                    aria-label="customer_email" aria-describedby="basic-addon1">
                 </div>
-                <div>
-                  <input type="text" placeholder="Morada " />
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Password</span>
+                  <input type="password" class="form-control" placeholder="******" aria-label="customer_password"
+                    aria-describedby="basic-addon1">
                 </div>
-                <div class="input_container">
-                  <input type="date" placeholder="Data de Nascimento " />
-                  <input type="number" placeholder="NIF " />
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">Repita Password</span>
+                  <input type="password" class="form-control" placeholder="******" aria-label="customer_confirm"
+                    aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text" id="basic-addon1">NIF</span>
+                  <input type="number" class="form-control" placeholder="nº identificação fiscal"
+                    aria-label="customer_nif" aria-describedby="basic-addon1">
                 </div>
                 <div class="button_container">
                   <button class="button_outline" type="reset">Limpar</button>
@@ -132,4 +148,5 @@
     </div>
   </div>
 </body>
+
 </html>

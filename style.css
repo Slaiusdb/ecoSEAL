@@ -167,6 +167,28 @@ p {
     margin-bottom: 25px;
 }
 
+form input {
+    height: 40px;
+    width: 100%;
+    padding-left: 15px;
+    border: 1px solid #e6e6e6;
+    border: 1px solid #e6e6e6;
+    outline: none;
+    border-radius: 5px;
+}
+
+.input-group-text{
+    height: 40px;
+    width: 150px;
+    padding-left: 15px;
+    background-color: #e6e6e6;
+    border: 1px solid #e6e6e6;
+    color: #2c3d63;
+    outline: none;
+    justify-content: end;
+    border-radius: 5px;
+}
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -475,7 +497,7 @@ input[type="number"]::-webkit-inner-spin-button {
     margin-top: 30px;
     background-color: #2c3d63;
     padding: 30px 10px 10px;
-    height: 650px;
+    height: 580px;
     border-radius: 30px;
     position: relative;
     color: #fff;
@@ -486,16 +508,6 @@ input[type="number"]::-webkit-inner-spin-button {
 .form-box h2{
     margin-bottom: 20px;
     color: #aee5d1;
-}
-
-.product-form input {
-    height: 40px;
-    width: 100%;
-    padding-left: 15px;
-    border: 1px solid #8e8e8e;
-    outline: none;
-    border-radius: 5px;
-    margin: 10px 0;
 }
 
 .input_numbers {
@@ -578,33 +590,8 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 20px;
 }
 
-.customer_edit_form h1 {
-    margin-bottom: 15px;
-}
-
-.customer_edit_form form input {
-    height: 40px;
-    width: 100%;
-    padding-left: 15px;
-    border: 1px solid #f1f1f1;
-    outline: none;
-    border-radius: 5px;
-    margin: 10px 0;
-}
-
-.customer_edit_form form .input_container {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    height: 40px;
-    width: 100%;
-    outline: none;
-    border-radius: 5px;
-    margin: 10px 0;
-}
-
 .button-box h1{
-    margin-bottom: 100px;
+    margin-bottom: 170px;
     text-align: center;
 }
 
@@ -654,16 +641,6 @@ input[type="number"]::-webkit-inner-spin-button {
     margin-bottom: 15px;
 }
 
-.login_section .login_form form input {
-    height: 40px;
-    width: 100%;
-    padding-left: 15px;
-    border: 1px solid #8e8e8e;
-    outline: none;
-    border-radius: 5px;
-    margin: 10px 0;
-}
-
 /* --- end login --- */
 /* --- register --- */
 
@@ -704,27 +681,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .register_section .register_form h1 {
     margin-bottom: 15px;
-}
-
-.register_section .register_form form input {
-    height: 40px;
-    width: 100%;
-    padding-left: 15px;
-    border: 1px solid #8e8e8e;
-    outline: none;
-    border-radius: 5px;
-    margin: 10px 0;
-}
-
-.register_section .register_form form .input_container {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    height: 40px;
-    width: 100%;
-    outline: none;
-    border-radius: 5px;
-    margin: 10px 0;
 }
 
 /* --- end register --- */
