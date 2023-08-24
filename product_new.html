@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Histórico de Compras</title>
+    <title>ecoSEAL</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/pt-sans" type="text/css" />
@@ -50,14 +50,15 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contacts.html">Contactos</a>
                             </li>
-                            <li class="nav-item dropdown active">
-                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     Área Pessoal
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="customer_edit.html">Alterar Dados</a></li>
-                                    <li><a class="dropdown-item active">Histórico de Compras</a></li>
+                                    <li><a class="dropdown-item" href="customer_purchases.html">Histórico de Compras</a>
+                                    </li>
                                     <li><a class="dropdown-item" href="customer_assistance.html">Assistência</a></li>
                                     <li><a class="dropdown-item" href="index.html">Logout</a></li>
                                 </ul>
@@ -72,9 +73,71 @@
         </div>
         <!-- ------------------------------------------ END HEADER ----------------------------------------- -->
         <!-- ------------------------------------------ MAIN ----------------------------------------------- -->
-
-
-
+        <!-- barra de edição - Admin -->
+        <section class="admin-section">
+            <div class="container">
+                <div class="row">
+                    <div class="button_container">
+                        <button class="button_admin" type="reset"><a href="product.html">Cancelar</a></button>
+                        <button class="button_admin" type="submit"><a href="catalog.html">Salvar</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- secção do produto -->
+        <section class="product-section">
+            <div class="container">
+                <form action="#" method="get" enctype="multipart/form-data">
+                    <div class="row">
+                        <!-- selecção da imagem -->
+                        <div class="col-md-7 col-xs-12">
+                            <div>
+                                <label style="color: #2c3d63;" for="product_image">
+                                    <h4>Imagem do Produto:</h4>
+                                </label><br>
+                                <label for="product_image" class="custom-file-label">Escolher Imagem</label>
+                                <input type="file" id="product_image" name="product_image" accept=".png, .jpg, .jpeg"
+                                    class="custom-file-input" />
+                                <div id="image_preview">
+                                    <img id="default_image" src="images/default.png" alt="Default Image"
+                                        style="max-width: 100%;">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- formulário -->
+                        <div class="col-md-5 col-xs-12">
+                            <div class="form-box">
+                                <h2>
+                                    Novo Produto
+                                </h2>
+                                <div class="product-form">
+                                    <div>
+                                        <label for="product_name">Nome do Produto:</label><br>
+                                        <input type="text" id="product_name" placeholder=" " />
+                                    </div>
+                                    <div class="input_numbers">
+                                        <div>
+                                            <label for="product_price">Preço Unitário:</label><br>
+                                            <input type="number" id="product_price" placeholder="€" />
+                                        </div>
+                                        <div>
+                                            <label for="product_stock">Quantidade de Stock:</label><br>
+                                            <input type="number" id="product_stock" placeholder="Stock" />
+                                        </div>
+                                    </div>
+                                    <div class="text-box">
+                                        <label for="product_description">Descrição do Produto:</label><br>
+                                        <textarea class="description_box" placeholder="Descrição" rows="5"
+                                            id="product_description" name="Description"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
         <!-- ------------------------------------------ END MAIN ------------------------------------------- -->
     </div>
     <!-- ------------------------------------------ FOOTER --------------------------------------------- -->
@@ -86,4 +149,5 @@
         </div>
     </div>
 </body>
+
 </html>

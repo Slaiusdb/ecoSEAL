@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Histórico de Compras</title>
+    <title>Produto</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/pt-sans" type="text/css" />
@@ -50,14 +50,15 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contacts.html">Contactos</a>
                             </li>
-                            <li class="nav-item dropdown active">
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     Área Pessoal
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="customer_edit.html">Alterar Dados</a></li>
-                                    <li><a class="dropdown-item active">Histórico de Compras</a></li>
+                                    <li><a class="dropdown-item" href="customer_purchases.html">Histórico de Compras</a>
+                                    </li>
                                     <li><a class="dropdown-item" href="customer_assistance.html">Assistência</a></li>
                                     <li><a class="dropdown-item" href="index.html">Logout</a></li>
                                 </ul>
@@ -72,9 +73,42 @@
         </div>
         <!-- ------------------------------------------ END HEADER ----------------------------------------- -->
         <!-- ------------------------------------------ MAIN ----------------------------------------------- -->
-
-
-
+        <!-- barra de edição - Admin -->
+        <section class="admin-section">
+            <div class="container">
+                <div class="row">
+                    <div class="button_container">
+                        <button class="button_admin" type="button"><a href="product_edit.html">Editar</a></button>
+                        <button class="button_admin" type="submit"><a href="catalog.html">Eliminar</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- secção do produto -->
+        <section class="product-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 col-xs-12">
+                        <div>
+                            <img src="images/default.png" alt="Imagem" class="image-product">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-md-5 col-xs-12">
+                        <div class="outer-box">
+                            <div class="text-box">
+                                <h2 class="product-name">Produto</h2>
+                                <br>
+                                <h4 class="text-price">00.00€</h4>
+                                <br>
+                                <p class="text-product">Descrição</p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- ------------------------------------------ END MAIN ------------------------------------------- -->
     </div>
     <!-- ------------------------------------------ FOOTER --------------------------------------------- -->
@@ -86,4 +120,5 @@
         </div>
     </div>
 </body>
+
 </html>

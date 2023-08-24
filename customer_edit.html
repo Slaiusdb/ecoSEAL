@@ -57,8 +57,10 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item active">Alterar Dados</a></li>
-                                    <li><a class="dropdown-item" href="customer_purchases.html">Histórico de Compras</a></li>
+                                    <li><a class="dropdown-item" href="customer_purchases.html">Histórico de Compras</a>
+                                    </li>
                                     <li><a class="dropdown-item" href="customer_assistance.html">Assistência</a></li>
+                                    <li><a class="dropdown-item" href="index.html">Logout</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -71,9 +73,51 @@
         </div>
         <!-- ------------------------------------------ END HEADER ----------------------------------------- -->
         <!-- ------------------------------------------ MAIN ----------------------------------------------- -->
-
-
-
+        <section class="customer_edit_section layout_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- Buttons -->
+                        <div class="button-box">
+                            <h1>
+                                Alterar os Dados Pessoais
+                            </h1>
+                            <button class="button_solid" type="submit"><a href="index.html">Salvar</a></button>
+                            <div class="button_container">
+                                <button class="button_outline" type="reset">Limpar</button>
+                                <button class="button_outline" type="button"><a href="index.html">Cancelar</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <!-- Customer edit form -->
+                        <div class="customer_edit_form">
+                            <form action="#" method="get">
+                                <div>
+                                    <input type="text" placeholder="Nome " />
+                                </div>
+                                <div>
+                                    <input type="email" placeholder="Email " />
+                                </div>
+                                <div>
+                                    <input type="password" placeholder="Password" />
+                                </div>
+                                <div>
+                                    <input type="password" placeholder="Repita Password" />
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="Morada " />
+                                </div>
+                                <div class="input_container">
+                                    <input type="date" placeholder="Data de Nascimento " />
+                                    <input type="number" placeholder="NIF " />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- ------------------------------------------ END MAIN ------------------------------------------- -->
     </div>
     <!-- ------------------------------------------ FOOTER --------------------------------------------- -->
@@ -85,4 +129,5 @@
         </div>
     </div>
 </body>
+
 </html>
