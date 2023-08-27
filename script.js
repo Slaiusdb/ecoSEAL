@@ -1,7 +1,7 @@
 // fixar footer quando a altura da página é mínima. libertar quando há necessidade de scroll
 /* window.addEventListener('DOMContentLoaded', function () {
-    const contentWrapper = document.querySelector('.content_wrapper');
-    const footerSection = document.querySelector('.footer_section');
+    const contentWrapper = document.querySelector('.content-wrapper');
+    const footerSection = document.querySelector('.footer-section');
 
     function updateFooterPosition() {
         if (contentWrapper.clientHeight <= window.innerHeight) {
@@ -18,7 +18,7 @@
 //mostrar imagem escolhida
 document.addEventListener('DOMContentLoaded', function () {
     const productImageInput = document.getElementById('product_image');
-    const imagePreview = document.getElementById('image_preview');
+    const imagePreview = document.getElementById('image-preview');
     const defaultImage = document.getElementById('default_image');
 
     productImageInput.addEventListener('change', function () {
@@ -44,3 +44,29 @@ document.addEventListener('DOMContentLoaded', function () {
         defaultImage.style.display = 'block';
     }
 });
+
+// mostrar/esconder o sidebar
+document.addEventListener('DOMContentLoaded', function () {
+    const btnMenu = document.querySelector('.btn-menu');
+    const btnclose = document.querySelector('.btn-close');
+    const sidebar = document.querySelector('.sidebar');
+
+    // abre o sidebar
+    btnMenu.addEventListener('click', function () {
+        sidebar.classList.toggle('sidebar-open');
+    });
+
+    // fecha o sidebar
+    btnclose.addEventListener('click', function () {
+        sidebar.classList.remove('sidebar-open');
+    });
+});
+
+/* global bootstrap: false */
+(() => {
+    'use strict'
+    const tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    tooltipTriggerList.forEach(tooltipTriggerEl => {
+        new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+})()

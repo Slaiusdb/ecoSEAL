@@ -16,11 +16,10 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: white;
-    display: block;
+    background-color: #fff;
 }
 
-.content_wrapper {
+.content-wrapper {
     flex: 1;
 }
 
@@ -49,7 +48,7 @@ p {
     font-size: 16px;
 }
 
-.button_solid {
+.btn-solid {
     padding: 2px 35px;
     font-family: PTSansBold, Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -63,18 +62,18 @@ p {
     color: #fff;
 }
 
-.button_solid a {
+.btn-solid a {
     text-decoration: none;
     color: inherit;
 }
 
-.button_solid:hover {
+.btn-solid:hover {
     background-color: #aee5d1;
     border: 2px solid #aee5d1;
     color: #2c3d63;
 }
 
-.button_outline {
+.btn-outline {
     padding: 2px 35px;
     font-family: PTSansBold, Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -89,18 +88,18 @@ p {
     color: #aee5d1;
 }
 
-.button_outline a {
+.btn-outline a {
     text-decoration: none;
     color: inherit;
 }
 
-.button_outline:hover {
+.btn-outline:hover {
     background-color: #aee5d1;
     border: 2px solid #aee5d1;
     color: #2c3d63;
 }
 
-.button_admin {
+.btn-admin {
     padding: 2px 35px;
     font-family: PTSansBold, Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -115,18 +114,18 @@ p {
     color: #fff;
 }
 
-.button_admin a {
+.btn-admin a {
     text-decoration: none;
     color: inherit;
 }
 
-.button_admin:hover {
+.btn-admin:hover {
     background-color: #95ce67;
     border: 2px solid #95ce67;
     color: #fff;
 }
 
-.button_product {
+.btn-product {
     font-family: PTSansBold, Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 18px;
@@ -140,26 +139,25 @@ p {
     color: #fff;
 }
 
-.button_product a {
+.btn-product a {
     text-decoration: none;
     color: inherit;
 }
 
-.button_product:hover {
+.btn-product:hover {
     background-color: transparent;
     color: #aee5d1;
 }
 
 .admin-section {
     display: flex;
-    justify-content: center;
     align-items: center;
     background-color: #aee5d1;
     width: 100%;
     height: 50px;
 }
 
-.button_container {
+.btn-container {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -177,7 +175,7 @@ form input {
     border-radius: 5px;
 }
 
-.input-group-text{
+.input-group-text {
     height: 40px;
     width: 150px;
     padding-left: 15px;
@@ -196,7 +194,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* --------------------- HEADER --------------------------------------------- */
-.header_section {
+.header-section {
     width: 100%;
     float: right;
     height: 80px;
@@ -207,12 +205,12 @@ input[type="number"]::-webkit-inner-spin-button {
 
 }
 
-.header_bg {
+.header-bg {
     background: #fff;
 }
 
 .bg-light {
-    background-color: #fff !important;
+    background-color: #fff;
 }
 
 .logo {
@@ -243,13 +241,8 @@ input[type="number"]::-webkit-inner-spin-button {
     color: #aee5d1;
 }
 
-.dropdown-menu .dropdown-item.active {
-    background-color: #fff;
-    color: #95ce67;
-}
-
-.dropdown-menu .dropdown-item.active:focus {
-    background-color: #fff;
+.dropdown-item.active,
+.dropdown-item.active:focus {
     color: #95ce67;
 }
 
@@ -271,23 +264,171 @@ input[type="number"]::-webkit-inner-spin-button {
     border-bottom-right-radius: 30px;
 }
 
+/* --- admin bar --- */
+
+.sidebar-toggle-button {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn-menu {
+    padding: 0 10px;
+    scale: 1.8;
+    background: none;
+    border: none;
+    color: #2c3d63;
+    text-decoration: none;
+}
+
+.btn-menu a {
+    color: inherit;
+}
+
+.btn-menu:hover {
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+/* --- end admin bar --- */
 /* --------------------- END HEADER --------------------------------------------- */
 /* --------------------- MAIN --------------------------------------------------- */
+/* --- sidebar --- */
+
+.btn-close:hover {
+    background-color: #aee5d1;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -270px;
+    width: 270px;
+    height: 100%;
+    background-color: #2c3d63;
+    transition: left 0.3s ease;
+    z-index: 999;
+    font-family: PTSansBold, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sidebar-open {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 5px 20px;
+}
+
+.border-sidebar {
+    background-color: #95ce67;
+}
+
+.btn-toggle {
+    padding: .25rem .5rem;
+    background-color: transparent;
+    font-family: PTSansBold, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #1a243a;
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+    color: #2c3d63;
+    background-color: #aee5d1;
+}
+
+.btn-toggle.active,
+.btn-toggle.active:hover,
+.btn-toggle.active:focus {
+    padding: .25rem .5rem;
+    background-color: transparent;
+    font-family: PTSansBold, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #95ce67;
+    cursor: text;
+    touch-action: none;
+}
+
+.btn-toggle[aria-expanded="true"] {
+    color: #1a243a;
+}
+
+.btn-toggle-nav a {
+    padding: .1875rem .5rem;
+    margin-left: 1.25rem;
+}
+
+
+.btn-toggle-nav {
+    color: #1a243a;
+}
+
+.nav-link-admin {
+    font-family: PTSansBold, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #1a243a;
+    text-decoration: none;
+}
+
+.nav-link-admin:hover,
+.nav-link-admin:focus {
+    font-family: PTSansBold, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #aee5d1;
+    color: #2c3d63;
+    border-radius: 5px;
+}
+
+.nav-link-admin.active,
+.nav-link-admin.active:hover,
+.nav-link-admin.active:focus {
+    background-color: transparent;
+    color: #95ce67;
+    cursor: text;
+    touch-action: none;
+}
+
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+    background-color: #aee5d1;
+}
+
+.bi.pe-none {
+    fill: #2c3d63;
+}
+
+.bi.pe-none.active {
+    fill: #95ce67;
+}
+
+/* --- end sidebar --- */
 /* --- contacts --- */
 
-.contacts_section {
+.contacts-section {
     width: 100%;
     float: left;
     padding: 50px 100px 80px;
 }
 
-.contacts_title {
+.contacts-title {
     width: 100%;
     text-align: center;
     padding-bottom: 30px;
 }
 
-.email_section {
+.email-section {
     height: 500px;
     background-color: #2c3d63;
     -webkit-box-align: center;
@@ -299,7 +440,7 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 30px;
 }
 
-.email_form {
+.email-form {
     background-color: rgba(255, 255, 255, 0.15);
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -308,7 +449,7 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 20px;
 }
 
-.email_input {
+.email-input {
     width: 100%;
     height: 40px;
     border: 1px solid #8e8e8e;
@@ -318,7 +459,7 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 5px;
 }
 
-.message_box {
+.message-box {
     width: 100%;
     height: 110px;
     padding: 15px;
@@ -328,7 +469,7 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 5px;
 }
 
-.contacts_section .button_container {
+.contacts-section .btn-container {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -347,7 +488,7 @@ input[type="number"]::-webkit-inner-spin-button {
     display: flex;
 }
 
-.button_container_catalog {
+.btn-container-catalog {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -355,7 +496,7 @@ input[type="number"]::-webkit-inner-spin-button {
     margin-bottom: 10px;
 }
 
-.button_container_catalog .button_admin {
+.btn-container-catalog .btn-admin {
     width: 100%;
     padding: 0 35px;
     font-weight: bold;
@@ -367,29 +508,29 @@ input[type="number"]::-webkit-inner-spin-button {
     color: #aee5d1;
 }
 
-.button_container_catalog .button_admin a {
+.btn-container-catalog .btn-admin a {
     text-decoration: none;
     color: inherit;
 }
 
-.button_container_catalog .button_admin:hover {
+.btn-container-catalog .btn-admin:hover {
     background-color: #aee5d1;
     border: 2px solid #aee5d1;
     color: #2c3d63;
 }
 
-.catalog_section {
+.catalog-section {
     width: 100%;
     float: left;
     padding: 50px 80px;
 }
 
-.catalog_title {
+.catalog-title {
     width: 100%;
     text-align: center;
 }
 
-.cards_section {
+.cards-section {
     width: 100%;
     float: left;
     margin: 20px 0;
@@ -505,17 +646,17 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 16px;
 }
 
-.form-box h2{
+.form-box h2 {
     margin-bottom: 20px;
     color: #aee5d1;
 }
 
-.input_numbers {
+.input-numbers {
     display: flex;
     gap: 20px;
 }
 
-.description_box {
+.description-box {
     background-color: #fff;
     margin: 0;
     height: 350px;
@@ -549,13 +690,13 @@ input[type="number"]::-webkit-inner-spin-button {
     cursor: pointer;
 }
 
-.custom-file-label:hover  {
+.custom-file-label:hover {
     background-color: #2c3d63;
     border: 2px solid #2c3d63;
     color: #fff;
 }
 
-.image_preview {
+.image-preview {
     display: block;
     margin-top: 10px;
     width: auto;
@@ -567,13 +708,13 @@ input[type="number"]::-webkit-inner-spin-button {
 /* --- end product_edit + product_new --- */
 /* --- customer_edit --- */
 
-.customer_edit_section {
+.customer-edit-section {
     padding: 140px 50px 70px;
     background-size: cover;
     color: #fff;
 }
 
-.customer_edit_section .row {
+.customer-edit-section .row {
     background-color: #2c3d63;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -582,7 +723,7 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 30px;
 }
 
-.customer_edit_form {
+.customer-edit-form {
     margin: 10px 00px;
     padding: 30px 20px;
     background-color: #f8f8f8;
@@ -590,29 +731,29 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 20px;
 }
 
-.button-box h1{
+.btn-box h1 {
     margin-bottom: 170px;
     text-align: center;
 }
 
-.button-box .button_outline {
+.btn-box .btn-outline {
     width: 150px;
 }
 
-.button-box .button_solid {
+.btn-box .btn-solid {
     width: 320px;
 }
 
-/* --- end customer_edit --- */
+/* --- end customer-edit --- */
 /* --- login --- */
 
-.login_section {
+.login-section {
     padding: 150px 50px 100px 50px;
     background-size: cover;
     color: #fff;
 }
 
-.login_section .row {
+.login-section .row {
     background-color: #2c3d63;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -629,7 +770,7 @@ input[type="number"]::-webkit-inner-spin-button {
     margin-bottom: 50px;
 }
 
-.login_section .login_form {
+.login-section .login-form {
     margin: 10px 00px;
     padding: 30px 20px;
     background-color: rgba(255, 255, 255, 0.15);
@@ -637,20 +778,20 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 20px;
 }
 
-.login_section .login_form h1 {
+.login-section .login-form h1 {
     margin-bottom: 15px;
 }
 
 /* --- end login --- */
 /* --- register --- */
 
-.register_section {
+.register-section {
     padding: 140px 50px 70px;
     background-size: cover;
     color: #fff;
 }
 
-.register_section .row {
+.register-section .row {
     background-color: #2c3d63;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -671,7 +812,7 @@ input[type="number"]::-webkit-inner-spin-button {
     margin-bottom: 50px;
 }
 
-.register_section .register_form {
+.register-section .register-form {
     margin: 10px 00px;
     padding: 30px 20px;
     background-color: rgba(255, 255, 255, 0.15);
@@ -679,7 +820,7 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 20px;
 }
 
-.register_section .register_form h1 {
+.register-section .register-form h1 {
     margin-bottom: 15px;
 }
 
@@ -687,7 +828,7 @@ input[type="number"]::-webkit-inner-spin-button {
 /* --------------------- END MAIN ----------------------------------------------- */
 /* --------------------- FOOTER ------------------------------------------------- */
 
-.footer_section {
+.footer-section {
     width: 100%;
     float: left;
     background-color: #1a243a;
@@ -702,13 +843,13 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 100%;
 }
 
-.footer_text {
+.footer-text {
     font-family: Bree Serif, Georgia, 'Times New Roman', Times, serif;
     color: #fff;
     font-size: 15px;
 }
 
-.mini_logo {
+.mini-logo {
     float: left;
     margin-right: 30px;
 }
