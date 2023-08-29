@@ -43,7 +43,13 @@ h4 {
     font-size: 20px;
 }
 
-p {
+h5 {
+    font-family: Bree Serif, Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+p,
+td {
     font-family: PTSansRegular, Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
@@ -107,6 +113,7 @@ p {
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
+    text-decoration: none;
     border-radius: 10px;
     margin-top: 20px;
     background-color: #2c3d63;
@@ -169,7 +176,6 @@ form input {
     height: 40px;
     width: 100%;
     padding-left: 15px;
-    border: 1px solid #e6e6e6;
     border: 1px solid #e6e6e6;
     outline: none;
     border-radius: 5px;
@@ -243,6 +249,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .dropdown-item.active,
 .dropdown-item.active:focus {
+    background-color: #fff;
     color: #95ce67;
 }
 
@@ -745,6 +752,196 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* --- end customer-edit --- */
+/* --- customer-new --- */
+
+.customer-new-section {
+    padding: 70px 50px;
+    background-size: cover;
+    color: #fff;
+}
+
+.customer-new-section .row {
+    background-color: #2c3d63;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: last baseline;
+    padding-left: 100px;
+    border-radius: 30px;
+}
+
+.customer-new-form {
+    margin: 10px 00px;
+    padding: 30px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+    border-radius: 20px;
+}
+
+/* --- end customer-new --- */
+/* --- customer_view --- */
+
+.customer-view-section {
+    padding: 70px 50px;
+    background-size: cover;
+    color: #fff;
+}
+
+.customer-view-section .row {
+    background-color: #2c3d63;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: first baseline;
+    padding-left: 100px;
+    border-radius: 30px;
+}
+
+.customer-view-box {
+    margin: 10px 00px;
+    padding: 30px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.input-group-text {
+    height: 40px;
+    width: 150px;
+    padding-left: 15px;
+    background-color: #e6e6e6;
+    border: 1px solid #e6e6e6;
+    color: #2c3d63;
+    outline: none;
+    justify-content: end;
+    border-radius: 5px;
+}
+
+.text-customer-details {
+    display: flex;
+    height: 40px;
+    width: 480px;
+    margin: 0 auto;
+    padding-left: 15px;
+    background-color: #fff;
+    color: #1a243a;
+    text-align: left;
+    align-items: center;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+}
+
+.left-box h1 {
+    /* margin-top: 30px; */
+    text-align: center;
+}
+
+/* --- end customer-view --- */
+/* --- customer-list --- */
+
+.customer-list-section {
+    padding: 70px 50px;
+    background-size: cover;
+    color: #fff;
+}
+
+.customer-list-section .row {
+    background-color: #2c3d63;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: last baseline;
+    border-radius: 30px;
+    position: relative;
+}
+
+.customer-list {
+    margin: 10px 0;
+    padding: 10px 10px;
+    width: 880px;
+    background-color: #f8f8f8;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.customer-table {
+    padding: 0 20px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    color: #1a243a;
+}
+
+.customer-table thead {
+    height: auto;
+    background-color: #2c3d63;
+    color: #fff;
+    border-bottom: 5px solid #aee5d1;
+    border-radius: 15px;
+}
+
+.customer-table tbody {
+    padding: 5px;
+    justify-content: center;
+    background-color: #f8f8f8;
+    color: #1a243a;
+}
+
+.customer-table th,
+.customer-table td {
+    padding: 5px 30px;
+    vertical-align: middle;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.buttons-table {
+    justify-content: center;
+    align-items: center;
+    float: right;
+    padding: 0 30px;
+    overflow: hidden;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.buttons-table thead {
+    padding: 0 30px;
+    color: #fff;
+    border-bottom: 5px solid #aee5d1;
+    border-radius: 15px;
+}
+
+.buttons-table th,
+.buttons-table td {
+    padding: 5px 30px;
+    vertical-align: middle;
+    border-bottom: 1px solid #1a243a;
+}
+
+.btn-list {
+    padding: 0 15px;
+    font-size: 14px;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    color: #aee5d1;
+}
+
+.btn-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn-list:hover {
+    background-color: #aee5d1;
+    border: none;
+    color: #2c3d63;
+}
+
+/* --- end customer-list --- */
 /* --- login --- */
 
 .login-section {

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Lista de Clientes</title>
+    <title>Cliente</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/pt-sans" type="text/css" />
@@ -114,8 +114,8 @@
                         <a class="btn-menu" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
                     </div>
                     <div class="btn-container">
-                        <button class="btn-admin" type="button"><a href="customer_new.html">Adicionar
-                                Cliente</a></button>
+                        <button class="btn-admin" type="submit"><a href="customer_list.html">Eliminar</a></button>
+                        <button class="btn-admin" type="button"><a href="customer_list.html">Sair</a></button>
                     </div>
                 </div>
             </div>
@@ -192,7 +192,7 @@
                             <div class="collapse" id="customers-collapse">
                                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                     <li class="nav-item-admin">
-                                        <a class="nav-link-admin active">Lista Clientes</a>
+                                        <a class="nav-link-admin" href="customer_list.html">Lista Clientes</a>
                                     </li>
                                     <li class="nav-item-admin">
                                         <a class="nav-link-admin" href="customer_new.html">Novo Cliente</a>
@@ -219,62 +219,40 @@
             </div>
         </div>
 
-        <!-- customer list -->
-        <section class="customer-list-section layout_padding">
+        <!-- customer view section -->
+        <section class="customer-view-section layout_padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8">
-                        <div class="customer-list">
-                            <table class="customer-table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col" class="col-id">
-                                            <h5>Id</h5>
-                                        </th>
-                                        <th scope="col" class="col-first-name">
-                                            <h5>Nome</h5>
-                                        </th>
-                                        <th scope="col" class="col-last-name">
-                                            <h5>Apelido</h5>
-                                        </th>
-                                        <th scope="col" class="col-address">
-                                            <h5>Morada</h5>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>André</td>
-                                        <td>Silva</td>
-                                        <td>Rua da Costa, Braga</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="col-md-4">
+                        <div class="left-box">
+                            <h1>
+                                Ficha de Cliente
+                            </h1>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="action-buttons">
-                            <table class="buttons-table">
-                                <thead>
-                                    <tr>
-                                        <th colspan=2 class="text-center">
-                                            <h5>Ações</h5>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <a type='button' class="btn-list" href="customer_view.html"><i
-                                                    class="fa fa-search"></i></a>
-                                        </td>
-                                        <td>
-                                            <a type='button' class="btn-list"><i class="fa fa-trash"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="col-md-8">
+                        <!-- Customer details -->
+                        <div class="customer-view-box">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Nome</span>
+                                <p class="text-customer-details" id="customer-first-name">Nome</p>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Apelido</span>
+                                <p class="text-customer-details" id="customer-last-name">Apelido</p>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Morada</span>
+                                <p class="text-customer-details" id="customer-address">Morada</p>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Email</span>
+                                <p class="text-customer-details" id="customer-email">Email</p>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">NIF</span>
+                                <p class="text-customer-details" id="customer-nif">NIF</p>
+                            </div>
                         </div>
                     </div>
                 </div>

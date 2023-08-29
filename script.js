@@ -62,11 +62,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-/* global bootstrap: false */
-(() => {
-    'use strict'
-    const tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    tooltipTriggerList.forEach(tooltipTriggerEl => {
-        new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-})()
+// botão reset
+/* document.querySelector('.btn-outline[type="reset"]').addEventListener('click', function() {
+    // Selecionar todos os campos do formulário e redefinir seus valores
+    document.querySelectorAll('.customer-new-form input').forEach(input => {
+        input.value = '';
+    });
+}); */
+
