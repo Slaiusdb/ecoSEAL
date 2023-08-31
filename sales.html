@@ -215,6 +215,272 @@
             </div>
         </div>
 
+        <section class="admin-queries-section layout_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="selector-box">
+                            <h1>
+                                Histórico de Vendas
+                            </h1>
+                            <!-- select button -->
+                            <label class="text-select">
+                                <h5>Escolha uma tabela a consultar</h5>
+                            </label>
+                            <div class="select-options">
+                                <select id="custom-select">
+                                    <option class="item-list" value="0" disabled selected></option>
+                                    <option class="item-list" value="Date">Data</option>
+                                    <option class="item-list" value="Status">Estado Expedição</option>
+                                    <option class="item-list" value="Address">Localidade</option>
+                                    <option class="item-list" value="Customer">Clientes Sem Encomendas</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="result-box">
+
+                            <!-- data query -->
+                            <div class="query-list" id="date" style="display: none;">
+                                <div class="select-container">
+                                    <div class="select-group">
+                                        <label class="text-select">
+                                            <h5>Escolha o ano</h5>
+                                        </label>
+                                        <div class="select-options">
+                                            <select id="custom-select">
+                                                <option class="item-list" value="0" disabled selected></option>
+                                                <option class="item-list" value="1">2023</option>
+                                                <option class="item-list" value="2" disabled>2024</option>
+                                                <option class="item-list" value="3" disabled>2025</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="select-group">
+                                        <label class="text-select">
+                                            <h5>Escolha o mês</h5>
+                                        </label>
+                                        <div class="select-options">
+                                            <select id="custom-select">
+                                                <option class="item-list" value="0" disabled selected></option>
+                                                <option class="item-list" value="1" disabled>Janeiro</option>
+                                                <option class="item-list" value="2" disabled>Fevereiro</option>
+                                                <option class="item-list" value="3" disabled>Março</option>
+                                                <option class="item-list" value="4" disabled>Abril</option>
+                                                <option class="item-list" value="5" disabled>Maio</option>
+                                                <option class="item-list" value="6" disabled>Junho</option>
+                                                <option class="item-list" value="7">Julho</option>
+                                                <option class="item-list" value="8">Agosto</option>
+                                                <option class="item-list" value="9">Setembro</option>
+                                                <option class="item-list" value="10">Outubro</option>
+                                                <option class="item-list" value="11" disabled>Novembro</option>
+                                                <option class="item-list" value="12" disabled>Dezembro</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <table class="query-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="col-order-id">
+                                                    <h5>Id</h5>
+                                                </th>
+                                                <th scope="col" class="col-date">
+                                                    <h5>Data</h5>
+                                                </th>
+                                                <th scope="col" class="col-customer-name" style="width: 200px;">
+                                                    <h5>Nome</h5>
+                                                </th>
+                                                <th scope="col" class="col-address">
+                                                    <h5>Morada</h5>
+                                                </th>
+                                                <th scope="col" class="col-order-total-price">
+                                                    <h5>Preço Total</h5>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>2023/08/15</td>
+                                                <td>José Castro</td>
+                                                <td>Coimbra</td>
+                                                <td>750.00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5</th>
+                                                <td>2023/08/23</td>
+                                                <td>Vera Alves</td>
+                                                <td>Guimarães</td>
+                                                <td>120.50</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- status query -->
+                            <div class="query-list" id="status" style="display: none;">
+                                <div class="select-container">
+                                    <div class="select-group">
+                                        <label class="text-select">
+                                            <h5>Escolha o Estado de Expedição</h5>
+                                        </label>
+                                        <div class="select-options">
+                                            <select id="custom-select">
+                                                <option class="item-list" value="0" disabled selected></option>
+                                                <option class="item-list" value="1">Processing</option>
+                                                <option class="item-list" value="2">Shipped</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <table class="query-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="col-order-id">
+                                                    <h5>Id</h5>
+                                                </th>
+                                                <th scope="col" class="col-date">
+                                                    <h5>Data</h5>
+                                                </th>
+                                                <th scope="col" class="col-customer-name">
+                                                    <h5>Nome</h5>
+                                                </th>
+                                                <th scope="col" class="col-address">
+                                                    <h5>Morada</h5>
+                                                </th>
+                                                <th scope="col" class="col-status">
+                                                    <h5>Estado</h5>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>2023/08/15</td>
+                                                <td>José Castro</td>
+                                                <td>Coimbra</td>
+                                                <td>Shipped</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5</th>
+                                                <td>2023/08/23</td>
+                                                <td>Vera Alves</td>
+                                                <td>Guimarães</td>
+                                                <td>Shipped</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- address query -->
+                            <div class="query-list" id="address" style="display: none;">
+                                <div class="select-container">
+                                    <div class="select-group">
+                                        <label class="text-select">
+                                            <h5>Escolha a Localidade</h5>
+                                        </label>
+                                        <div class="select-options">
+                                            <select id="custom-select">
+                                                <option class="item-list" value="0" disabled selected></option>
+                                                <option class="item-list" value="1">Aveiro</option>
+                                                <option class="item-list" value="2">Braga</option>
+                                                <option class="item-list" value="3">Bragança</option>
+                                                <option class="item-list" value="4">Coimbra</option>
+                                                <option class="item-list" value="5">Évora</option>
+                                                <option class="item-list" value="6">Faro</option>
+                                                <option class="item-list" value="7">Guimarães</option>
+                                                <option class="item-list" value="8">Porto</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <table class="query-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="col-order-id">
+                                                    <h5>Id</h5>
+                                                </th>
+                                                <th scope="col" class="col-date">
+                                                    <h5>Data</h5>
+                                                </th>
+                                                <th scope="col" class="col-address">
+                                                    <h5>Morada</h5>
+                                                </th>
+                                                <th scope="col" class="col-status">
+                                                    <h5>Estado</h5>
+                                                </th>
+                                                <th scope="col" class="col-order-total-price">
+                                                    <h5>Preço Total</h5>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>2023/08/15</td>
+                                                <td>Braga</td>
+                                                <td>Shipped</td>
+                                                <td>122.50</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5</th>
+                                                <td>2023/08/23</td>
+                                                <td>Braga</td>
+                                                <td>Shipped</td>
+                                                <td>158.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- virgin client query -->
+                            <div id="customer" class="query-list" style="display: none;">
+                                <table class="query-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="col-customer-id">
+                                                <h5>Id</h5>
+                                            </th>
+                                            <th scope="col" class="col-customer-name">
+                                                <h5>Nome</h5>
+                                            </th>
+                                            <th scope="col" class="col-address">
+                                                <h5>Morada</h5>
+                                            </th>
+                                            <th scope="col" class="col-email">
+                                                <h5>Email</h5>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>José Martins</td>
+                                            <td>Faro</td>
+                                            <td>ze.castro@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>Eva Mendes</td>
+                                            <td>Aveiro</td>
+                                            <td>eva.mendes@gmail.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
 
         <!-- ------------------------------------------ END MAIN ------------------------------------------- -->
     </div>
@@ -226,6 +492,26 @@
                 Lobo</p>
         </div>
     </div>
+
+    <!-- seleccionar tabela através do select button -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var customSelect = document.getElementById('custom-select');
+            var queryLists = document.querySelectorAll('.query-list');
+
+            customSelect.addEventListener('change', function () {
+                queryLists.forEach(function (query) {
+                    query.style.display = 'none';
+                });
+
+                var selectedIndex = customSelect.selectedIndex;
+                if (selectedIndex > 0) {
+                    queryLists[selectedIndex - 1].style.display = 'block';
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>

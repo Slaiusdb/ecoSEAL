@@ -421,6 +421,33 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* --- end sidebar --- */
+/* --- about --- */
+
+.about-section {
+    padding: 70px 50px;
+    background-size: cover;
+    color: #1a243a;
+}
+
+
+.about-section .row {
+    background-color: #f8f8f8;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    padding: 0 100px;
+    border-radius: 30px;
+}
+
+.text-box {
+    margin: 10px 00px;
+    padding: 5px 10px;
+    height: auto;
+    background-color: #f8f8f8;
+    color: #1a243a;
+    text-align: left;
+}
+
+/* --- end about --- */
 /* --- contacts --- */
 
 .contacts-section {
@@ -835,9 +862,80 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* --- end customer-view --- */
-/* --- customer-list --- */
+/* --- customer-assistance --- */
 
-.customer-list-section {
+.assistance-section {
+    padding: 140px 50px 70px;
+    background-size: cover;
+    color: #fff;
+}
+
+.assistance-section .row {
+    background-color: #2c3d63;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: first baseline;
+    padding-left: 100px;
+    border-radius: 30px;
+}
+
+.left-box {
+    padding-right: 120px;
+}
+
+.submit-section {
+    height: 500px;
+    background-color: #2c3d63;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 30px 10px 10px 10px;
+    border-radius: 30px;
+}
+
+.email-form {
+    background-color: rgba(255, 255, 255, 0.15);
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.email-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #8e8e8e;
+    outline: none;
+    padding-left: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.message-box {
+    width: 100%;
+    height: 110px;
+    padding: 15px;
+    border: 1px solid #8e8e8e;
+    outline: none;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.assistance-section .btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+/* --- end customer-assistance --- */
+/* --- customer-list + stock-list --- */
+
+.customer-list-section,
+.stock-list-section {
     padding: 70px 50px;
     background-size: cover;
     color: #fff;
@@ -852,7 +950,17 @@ input[type="number"]::-webkit-inner-spin-button {
     position: relative;
 }
 
-.customer-list {
+.stock-list-section .row {
+    background-color: #2c3d63;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: first baseline;
+    border-radius: 30px;
+    position: relative;
+}
+
+.customer-list,
+.stock-list {
     margin: 10px 0;
     padding: 10px 10px;
     width: 880px;
@@ -861,7 +969,8 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 20px;
 }
 
-.customer-table {
+.customer-table,
+.stock-table {
     padding: 0 20px;
     width: 100%;
     overflow: hidden;
@@ -869,7 +978,8 @@ input[type="number"]::-webkit-inner-spin-button {
     color: #1a243a;
 }
 
-.customer-table thead {
+.customer-table thead,
+.stock-table thead {
     height: auto;
     background-color: #2c3d63;
     color: #fff;
@@ -877,7 +987,8 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 15px;
 }
 
-.customer-table tbody {
+.customer-table tbody,
+.stock-table tbody {
     padding: 5px;
     justify-content: center;
     background-color: #f8f8f8;
@@ -885,7 +996,9 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .customer-table th,
-.customer-table td {
+.customer-table td,
+.stock-table th,
+.stock-table td {
     padding: 5px 30px;
     vertical-align: middle;
     border-bottom: 1px solid #e6e6e6;
@@ -941,7 +1054,181 @@ input[type="number"]::-webkit-inner-spin-button {
     color: #2c3d63;
 }
 
-/* --- end customer-list --- */
+.title-box h1 {
+    margin-left: 50px;
+    text-align: center;
+}
+
+/* --- end customer-list + stock-list --- */
+/* --- queries --- */
+
+.admin-queries-section {
+    padding: 70px 50px;
+    background-size: cover;
+    color: #fff;
+}
+
+.queries-section {
+    padding: 140px 50px 70px;
+    background-size: cover;
+    color: #fff;
+}
+
+.queries-section .row,
+.admin-queries-section .row {
+    background-color: #2c3d63;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    padding-left: 100px;
+    border-radius: 30px;
+}
+
+.result-box {
+    margin: 10px 00px;
+    padding: 5px 10px;
+    height: 400px;
+    background-color: #f8f8f8;
+    color: #1a243a;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.selector-box h1 {
+    padding-top: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.text-select {
+    padding-left: 15px;
+}
+
+select {
+    outline: none;
+    flex: 1;
+    width: 300px;
+    padding-left: 10px;
+    color: #1a243a;
+    background-color: #fff;
+    cursor: pointer;
+    font-family: PTSansRegular, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select-options {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #1a243a;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* seta */
+.select-options::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #1a243a;
+    color: #fff;
+    pointer-events: none;
+}
+
+.select-options:hover::after {
+    color: #2c3d63;
+    background-color: #1a243a;
+    border: 1px 1px 1px 0 solid #2c3d63;
+}
+
+/* admin selects */
+.select-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.select-group {
+    text-align: center;
+}
+
+/* query list */
+.query-list-section {
+    padding: 10px 10px;
+    background-size: cover;
+    color: #fff;
+}
+
+.query-list-section .row {
+    background-color: #2c3d63;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: last baseline;
+    border-radius: 30px;
+    position: relative;
+}
+
+.query-list {
+    margin: 10px 0;
+    padding: 10px 10px;
+    width: auto;
+    background-color: #f8f8f8;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.query-table {
+    padding: 0 10px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    color: #1a243a;
+}
+
+.query-table thead {
+    height: auto;
+    background-color: #2c3d63;
+    color: #fff;
+    border-bottom: 5px solid #aee5d1;
+    border-radius: 15px;
+}
+
+.query-table tbody {
+    padding: 5px;
+    justify-content: center;
+    background-color: #f8f8f8;
+    color: #1a243a;
+}
+
+.query-table th,
+.query-table td {
+    padding: 5px 30px;
+    vertical-align: middle;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --- end queries --- */
 /* --- login --- */
 
 .login-section {

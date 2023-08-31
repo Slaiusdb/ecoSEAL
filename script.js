@@ -62,11 +62,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// botão reset
-/* document.querySelector('.btn-outline[type="reset"]').addEventListener('click', function() {
-    // Selecionar todos os campos do formulário e redefinir seus valores
-    document.querySelectorAll('.customer-new-form input').forEach(input => {
-        input.value = '';
-    });
-}); */
+// fazer desaparecer a primeira linha da caixa de queries
+const customSelect = document.getElementById("custom-select");
+let isFirstSelection = true;
+
+customSelect.addEventListener("change", function () {
+    if (isFirstSelection) {
+        const option = customSelect.querySelector("option[value='0']");
+        option.disabled = true;
+        option.selected = false;
+        isFirstSelection = false;
+    }
+});
+
+
+
+
 

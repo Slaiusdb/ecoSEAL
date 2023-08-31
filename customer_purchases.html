@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
 
     <title>Histórico de Compras</title>
 
@@ -73,8 +74,147 @@
         </div>
         <!-- ------------------------------------------ END HEADER ----------------------------------------- -->
         <!-- ------------------------------------------ MAIN ----------------------------------------------- -->
+        <section class="queries-section layout_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="selector-box">
+                            <h1>
+                                Histórico de Compras
+                            </h1>
+                            <!-- select button -->
+                            <label class="text-select">
+                                <h5>Escolha uma tabela a consultar</h5>
+                            </label>
+                            <div class="select-options">
+                                <select id="custom-select">
+                                    <option class="item-list" value="0" disabled selected></option>
+                                    <option class="item-list" value="orders">Encomendas</option>
+                                    <option class="item-list" value="products">Produtos</option>
+                                    <option class="item-list" value="total">Total</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="result-box">
 
+                            <!-- order query -->
+                            <div class="query-list" id="orders" style="display: none;">
+                                <table class="query-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="col-order-id">
+                                                <h5>Id</h5>
+                                            </th>
+                                            <th scope="col" class="col-date">
+                                                <h5>Data</h5>
+                                            </th>
+                                            <th scope="col" class="col-status">
+                                                <h5>Estado</h5>
+                                            </th>
+                                            <th scope="col" class="col-order-quantity">
+                                                <h5>Qtd Total</h5>
+                                            </th>
+                                            <th scope="col" class="col-order-total-price">
+                                                <h5>Preço Total</h5>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>2023/08/15</td>
+                                            <td>shipped</td>
+                                            <td>562</td>
+                                            <td>750.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>2023/08/23</td>
+                                            <td>processing</td>
+                                            <td>60</td>
+                                            <td>0.50</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
+                            <!-- products query -->
+                            <div class="query-list" id="products" style="display: none;">
+                                <table class="query-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="col-product-id">
+                                                <h5>Id</h5>
+                                            </th>
+                                            <th scope="col" class="col-name">
+                                                <h5>Nome</h5>
+                                            </th>
+                                            <th scope="col" class="col-unit-price">
+                                                <h5>Preço Unitário</h5>
+                                            </th>
+                                            <th scope="col" class="col-product-quantity">
+                                                <h5>Qtd Total</h5>
+                                            </th>
+                                            <th scope="col" class="col-product-total-price">
+                                                <h5>Preço Total</h5>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Tuna</td>
+                                            <td>0.50</td>
+                                            <td>500</td>
+                                            <td>250.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>Shark</td>
+                                            <td>1.20</td>
+                                            <td>60</td>
+                                            <td>72</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- total query -->
+                            <div class="query-list" id="total" style="display: none;">
+                                <table class="query-table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="col-actual-year-total">
+                                                <h5>Ano Atual</h5>
+                                            </th>
+                                            <th scope="col" class="col-last-month-total">
+                                                <h5>Último Mês</h5>
+                                            </th>
+                                            <th scope="col" class="col-actual-month-total">
+                                                <h5>Mês Actual</h5>
+                                            </th>
+                                            <th scope="col" class="col-overall-total">
+                                                <h5>Total</h5>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>250.00</td>
+                                            <td>52.00</td>
+                                            <td>63.50</td>
+                                            <td>882.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
 
         <!-- ------------------------------------------ END MAIN ------------------------------------------- -->
     </div>
@@ -86,5 +226,26 @@
                 Lobo</p>
         </div>
     </div>
+
+    <!-- seleccionar tabela através do select button -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var customSelect = document.getElementById('custom-select');
+            var queryLists = document.querySelectorAll('.query-list');
+
+            customSelect.addEventListener('change', function () {
+                queryLists.forEach(function (query) {
+                    query.style.display = 'none';
+                });
+
+                var selectedIndex = customSelect.selectedIndex;
+                if (selectedIndex > 0) {
+                    queryLists[selectedIndex - 1].style.display = 'block';
+                }
+            });
+        });
+    </script>
+
 </body>
+
 </html>
