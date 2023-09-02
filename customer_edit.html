@@ -30,7 +30,7 @@
         <!-- ----------------------------------------- HEADER --------------------------------------------------------- -->
         <div class="header-section">
             <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
                     <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -51,7 +51,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contacts.html">Contactos</a>
                             </li>
-                            <li class="nav-item dropdown active">
+                            <li class="nav-item-customer dropdown active">
                                 <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     Área Pessoal
@@ -64,8 +64,11 @@
                                     <li><a class="dropdown-item" href="index.html">Logout</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item-login">
                                 <a class="nav-link" href="login.html">Login</a>
+                            </li>
+                            <li class="nav-item-logout">
+                                <a class="nav-link" href="index.html">Logout</a>
                             </li>
                         </ul>
                     </div>
@@ -76,24 +79,25 @@
         <!-- ------------------------------------------ MAIN ----------------------------------------------- -->
         <section class="customer-edit-section layout_padding">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <!-- Buttons -->
-                        <div class="btn-box">
-                            <h1>
-                                Alterar os Dados Pessoais
-                            </h1>
-                            <button class="btn-solid" type="submit"><a href="index.html">Salvar</a></button>
-                            <div class="btn-container">
-                                <button class="btn-outline" type="reset">Limpar</button>
-                                <button class="btn-outline" type="button"><a href="index.html">Cancelar</a></button>
+                <form action="#" method="get">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <!-- Buttons -->
+                            <div class="btn-box">
+                                <h1>
+                                    Alterar os Dados Pessoais
+                                </h1>
+                                <button class="btn-solid" type="submit"><a href="index.html">Salvar</a></button>
+                                <div class="btn-container">
+                                    <button class="btn-outline" type="reset">Limpar</button>
+                                    <button class="btn-outline" type="button"><a href="index.html">Cancelar</a></button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-8">
-                        <!-- Customer edit form -->
-                        <div class="customer-edit-form">
-                            <form action="#" method="get">
+                        <div class="col-md-8">
+                            <!-- Customer edit form -->
+                            <div class="customer-edit-form">
+
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1">Nome</span>
                                     <input type="text" class="form-control" placeholder="seu nome"
@@ -129,10 +133,10 @@
                                     <input type="number" class="form-control" placeholder="nº identificação fiscal"
                                         aria-label="customer-nif" aria-describedby="basic-addon1">
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </section>
         <!-- ------------------------------------------ END MAIN ------------------------------------------- -->

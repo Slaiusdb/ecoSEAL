@@ -17,6 +17,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: #fff;
+    color: #1a243a;
 }
 
 .content-wrapper {
@@ -215,10 +216,6 @@ input[type="number"]::-webkit-inner-spin-button {
     background: #fff;
 }
 
-.bg-light {
-    background-color: #fff;
-}
-
 .logo {
     float: left;
     margin-left: 10px;
@@ -269,6 +266,18 @@ input[type="number"]::-webkit-inner-spin-button {
     padding: .5rem 30px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+}
+
+.nav-item-login {
+    display: flex;
+}
+
+.nav-item-logout {
+    display: none;
+}
+
+.nav-item-customer {
+    display: flex;
 }
 
 /* --- admin bar --- */
@@ -421,6 +430,110 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* --- end sidebar --- */
+/* --- home --- */
+
+.banner{
+    max-width: 100%;
+}
+
+.seal {
+    width: 100%;
+    height: auto;
+}
+
+.home-section {
+    padding: 0 50px 70px;
+    background-size: cover;
+    color: #fff;
+}
+
+.home-section2 {
+    padding: 70px 50px;
+    background-size: cover;
+    color: #fff;
+}
+
+.home-section .row {
+    background-color: #f8f8f8;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: last baseline;
+    padding-left: 100px;
+    border-radius: 30px;
+}
+
+.home-section2 .row {
+    background-color: #f8f8f8;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: last baseline;
+    padding-left: 0px;
+    border-radius: 30px;
+}
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin: 25px;
+}
+
+.subsection-box {
+    margin: 10px 00px;
+    padding: 5px 10px;
+    height: auto;
+    background-color: #fff;
+    color: #1a243a;
+    text-align: left;
+    padding-left: 30px;
+    border-radius: 20px;
+}
+
+.subsection2-box {
+    margin: 10px 00px;
+    padding: 5px 10px;
+    height: auto;
+    background-color: #fff;
+    color: #1a243a;
+    text-align: left;
+    border-radius: 20px;
+}
+
+.btn-right {
+    margin: 0 30px;
+    color: #1a243a;
+    align-items: last baseline;
+}
+
+.home-login-section {
+    padding: 0 50px;
+    background-size: cover;
+    color: #fff;
+}
+
+.home-login-section .row {
+    background-color: #2c3d63;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 100px;
+    border-radius: 30px;
+}
+
+.home-login-section .login-form {
+    margin: 10px 00px;
+    padding: 30px 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    text-align: center;
+    border-radius: 20px;
+}
+
+.home-login-section .login-form h1 {
+    margin-bottom: 15px;
+}
+
+/* --- end home --- */
 /* --- about --- */
 
 .about-section {
@@ -438,7 +551,7 @@ input[type="number"]::-webkit-inner-spin-button {
     border-radius: 30px;
 }
 
-.text-box {
+.text-box-about {
     margin: 10px 00px;
     padding: 5px 10px;
     height: auto;
@@ -776,6 +889,8 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .btn-box .btn-solid {
     width: 320px;
+    bottom: 60px;
+    left: 30px;
 }
 
 /* --- end customer-edit --- */
@@ -857,7 +972,6 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .left-box h1 {
-    /* margin-top: 30px; */
     text-align: center;
 }
 
@@ -1217,16 +1331,6 @@ select::-ms-expand {
     vertical-align: middle;
     border-bottom: 1px solid #e6e6e6;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* --- end queries --- */
 /* --- login --- */

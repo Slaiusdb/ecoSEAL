@@ -1,20 +1,3 @@
-// fixar footer quando a altura da página é mínima. libertar quando há necessidade de scroll
-/* window.addEventListener('DOMContentLoaded', function () {
-    const contentWrapper = document.querySelector('.content-wrapper');
-    const footerSection = document.querySelector('.footer-section');
-
-    function updateFooterPosition() {
-        if (contentWrapper.clientHeight <= window.innerHeight) {
-            footerSection.classList.add('fixed');
-        } else {
-            footerSection.classList.remove('fixed');
-        }
-    }
-
-    window.addEventListener('resize', updateFooterPosition);
-    updateFooterPosition();
-}); */
-
 //mostrar imagem escolhida
 document.addEventListener('DOMContentLoaded', function () {
     const productImageInput = document.getElementById('product_image');
@@ -75,6 +58,21 @@ customSelect.addEventListener("change", function () {
     }
 });
 
+
+// Se o utilizador for um admin (TypeID = 2), mostra a admin-section
+var userTypeID = 0;
+
+if (userTypeID === 2) {
+    var adminSection = document.getElementById('admin-section');
+    if (adminSection) {
+        adminSection.style.display = 'flex';
+    }
+} else {
+    var adminSection = document.getElementById('admin-section');
+    if (adminSection) {
+        adminSection.style.display = 'none';
+    }
+}
 
 
 
